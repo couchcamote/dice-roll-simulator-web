@@ -1,8 +1,9 @@
 <div>
-  <p>Simulate</p>
-<form>
-  <select name="side" id="side">
-    <option value="" disabled="disabled" selected="selected">Please select a name</option>
+  <h2>Simulate</h2>
+<form name="form" (ngSubmit)="onSubmit()">
+  <label>Number of Dice Sides :</label>
+  <select name="side" id="side" ngModel>
+    <option value="" disabled="disabled" selected="selected">Select number of sides</option>
     <option value="4">4</option>
     <option value="6">6</option>
     <option value="8">8</option>
@@ -11,8 +12,12 @@
     <option value="20">20</option>
     <option value="100">100</option>
 </select>
-  <input type="number" id="piece" value="Piece"/>
-  <input type="number" id="roll" value="Roll"/>
+<br/>
+  <label>Pieces :</label>
+  <input type="number" name="piece" id="piece" value="Piece" ngModel/>
+  <br/>
+  <label>Number of Rolls :</label>
+  <input type="number" name="roll" id="roll" value="Roll" ngModel/>
 
   <button type="submit">Submit</button>
   <button type="reset">Clear</button>
@@ -23,9 +28,9 @@
       <td>Count</td>
     </thead>
     <tbody>
-      <tr *ngFor="let total of totals">
-        <td>{{total.total}}</td>
-        <td>{{total.count}}</td>
+      <tr *ngFor="let t of totals">
+        <td>{{t.total}}</td>
+        <td>{{t.count}}</td>
       </tr>
 
 
