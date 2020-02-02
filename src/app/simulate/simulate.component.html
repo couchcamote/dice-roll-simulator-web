@@ -1,0 +1,36 @@
+<div>
+  <p>Simulate</p>
+<form>
+  <select name="side" id="side">
+    <option value="" disabled="disabled" selected="selected">Please select a name</option>
+    <option value="4">4</option>
+    <option value="6">6</option>
+    <option value="8">8</option>
+    <option value="10">10</option>
+    <option value="12">12</option>
+    <option value="20">20</option>
+    <option value="100">100</option>
+</select>
+  <input type="number" id="piece" value="Piece"/>
+  <input type="number" id="roll" value="Roll"/>
+
+  <button type="submit">Submit</button>
+  <button type="reset">Clear</button>
+
+  <table>
+    <thead>
+      <td>Total</td>
+      <td>Count</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let total of totals">
+        <td>{{total.total}}</td>
+        <td>{{total.count}}</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</form>
+</div>
+
