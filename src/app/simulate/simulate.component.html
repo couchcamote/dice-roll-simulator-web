@@ -2,7 +2,7 @@
   <h2>Simulate</h2>
 <form name="form" (ngSubmit)="onSubmit()">
   <label>Number of Dice Sides :</label>
-  <select name="side" id="side" ngModel>
+  <select name="side" id="side"  [(ngModel)]="side" >
     <option value="" disabled="disabled" selected="selected">Select number of sides</option>
     <option value="4">4</option>
     <option value="6">6</option>
@@ -14,14 +14,12 @@
 </select>
 <br/>
   <label>Pieces :</label>
-  <input type="number" name="piece" id="piece" value="Piece" ngModel/>
+  <input   type="number" name="piece" id="piece" value="Piece"  [(ngModel)]="piece"  />
   <br/>
   <label>Number of Rolls :</label>
-  <input type="number" name="roll" id="roll" value="Roll" ngModel/>
-
+  <input type="number" name="roll" id="roll" value="Roll"  [(ngModel)]="roll" />
+  <br>
   <button type="submit">Submit</button>
-  <button type="reset">Clear</button>
-
   <table>
     <thead>
       <td>Total</td>
@@ -32,8 +30,6 @@
         <td>{{t.total}}</td>
         <td>{{t.count}}</td>
       </tr>
-
-
     </tbody>
   </table>
 </form>

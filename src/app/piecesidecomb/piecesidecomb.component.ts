@@ -1,17 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SimulationService } from '../simulation.service';
 
 @Component({
-  selector: 'app-simulate',
-  templateUrl: './simulate.component.html',
-  styleUrls: ['./simulate.component.css']
+  selector: 'app-piecesidecomb',
+  templateUrl: './piecesidecomb.component.html',
+  styleUrls: ['./piecesidecomb.component.css']
 })
-export class SimulateComponent implements OnInit {
+export class PiecesidecombComponent implements OnInit {
   totals;
 
-  public roll = 100;
-  public side = 6;
-  public piece = 3;
+  public rows;
 
    constructor(private simulationService: SimulationService) {
     }
@@ -22,11 +20,11 @@ export class SimulateComponent implements OnInit {
 
   onSubmit() {
     console.log("FORM SUBMIT");
-    this.simulationService.getTotalsList(this.side, this.piece, this.roll)
+    this.simulationService.getPieceSide()
     .subscribe((resp) => {
       console.log("RESPONSE" + resp);
       if(resp.status === 'SUCCESS'){
-        this.totals = resp.list;
+        this.rows = resp.list;
       }
     }, error => {
       console.error('error handled in page', error); // TODO: change this to show UI error component

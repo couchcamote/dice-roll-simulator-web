@@ -1,0 +1,20 @@
+<div>
+    <h2>Piece Side Combination Relative Distribution</h2>
+    <form name="form" (ngSubmit)="onSubmit()">
+        <button type="submit">Submit</button>
+        <table>
+            <thead>
+            <td>Piece-Side</td>
+            <td>Distribution</td>
+            </thead>
+            <tbody>
+            <tr *ngFor="let r of rows">
+                <td>{{r.piece}}-{{r.side}}</td>
+                <td>{{r.distribution}}%</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+  
+  
