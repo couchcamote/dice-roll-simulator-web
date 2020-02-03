@@ -23,11 +23,15 @@
         <table class="table table-bordered table-sm" >
             <thead class="thead-dark">
             <td>Piece-Side</td>
+            <td>Total</td>
+            <td>Count</td>
             <td>Distribution</td>
             </thead>
             <tbody>
             <tr *ngFor="let r of rows">
                 <td>{{r.piece}}-{{r.side}}</td>
+                <td>{{r.total}}</td>
+                <td>{{r.count}}</td>
                 <td>{{r.distribution}}%</td>
             </tr>
             </tbody>
