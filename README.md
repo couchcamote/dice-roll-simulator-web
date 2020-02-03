@@ -1,6 +1,6 @@
-# DiceRollSimulatorWeb
+# Dice Roll Simulator Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
+Before running this application, the [back-end](https://github.com/couchcamote/dice-roll-simulator) server should be started first. 
 
 ## Development server
 
