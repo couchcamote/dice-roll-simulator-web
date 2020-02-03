@@ -2,6 +2,9 @@
 
 Before running this application, the [back-end](https://github.com/couchcamote/dice-roll-simulator) server should be started first. 
 
+Install any dependencies
+> npm install
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
