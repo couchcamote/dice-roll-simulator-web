@@ -1,12 +1,12 @@
 <div>
-    <h2>Piece Side Combination Count</h2>
+    <h2>Piece-Side Combination Count</h2>
     <div *ngIf="show" class="alert alert-danger" role="alert">
         {{message}}
       </div>
     <form name="form" (ngSubmit)="onSubmit()">
         <button type="submit">Refresh</button>
-        <table class="table table-bordered">
-            <thead>
+        <table class="table table-bordered table-sm">
+            <thead class="thead-dark">
             <td>Piece-Side</td>
             <td>Roll Count</td>
             <td>Simulation Count</td>
