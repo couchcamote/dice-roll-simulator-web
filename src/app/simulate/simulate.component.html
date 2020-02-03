@@ -1,7 +1,13 @@
 <div>
   <h2>Simulate</h2>
+  <div *ngIf="show" class="alert alert-danger" role="alert">
+    {{message}}
+  </div>
 <form name="form" (ngSubmit)="onSubmit()">
-  <label>Number of Dice Sides :</label>
+  <label>Pieces : </label>
+  <input   type="number" name="piece" id="piece" value="Piece"  [(ngModel)]="piece"  />
+  <br/>  
+  <label>Number of Dice Sides : </label>
   <select name="side" id="side"  [(ngModel)]="side" >
     <option value="" disabled="disabled" selected="selected">Select number of sides</option>
     <option value="4">4</option>
@@ -12,21 +18,18 @@
     <option value="20">20</option>
     <option value="100">100</option>
 </select>
-<br/>
-  <label>Pieces :</label>
-  <input   type="number" name="piece" id="piece" value="Piece"  [(ngModel)]="piece"  />
-  <br/>
-  <label>Number of Rolls :</label>
+<br/> 
+  <label>Number of Rolls : </label>
   <input type="number" name="roll" id="roll" value="Roll"  [(ngModel)]="roll" />
   <br>
   <button type="submit">Submit</button>
-  <table>
+  <table class="table table-bordered">
     <thead>
       <td>Total</td>
       <td>Count</td>
     </thead>
     <tbody>
-      <tr *ngFor="let t of totals">
+      <tr *ngFor="let t of totals" class="table-striped">
         <td>{{t.total}}</td>
         <td>{{t.count}}</td>
       </tr>

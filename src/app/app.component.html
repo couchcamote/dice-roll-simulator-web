@@ -12,22 +12,10 @@
 <div class="jumbotron">
   <h1>{{title}}</h1>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Simulation <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Distribution</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Relative Distribution</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<app-simulate></app-simulate>
-<app-piecesidecomb></app-piecesidecomb>
-<app-piecesidereldist></app-piecesidereldist>
-<router-outlet></router-outlet>
+<div class="container">
+  <app-simulate></app-simulate>
+  <app-piecesidecomb></app-piecesidecomb>
+  <app-piecesidereldist></app-piecesidereldist>
+  <router-outlet></router-outlet>
+</div>
+

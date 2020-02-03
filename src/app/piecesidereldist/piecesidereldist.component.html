@@ -1,8 +1,26 @@
 <div>
     <h2>Piece Side Combination Relative Distribution</h2>
+    <div *ngIf="show" class="alert alert-danger" role="alert">
+        {{message}}
+      </div>
     <form name="form" (ngSubmit)="onSubmit()">
+        <label>Pieces : </label>
+        <input   type="number" name="piece" id="piece" value="Piece"  [(ngModel)]="piece"  />
+        <br/>       
+        <label>Number of Dice Sides : </label>         
+        <select name="side" id="side"  [(ngModel)]="side" >
+          <option value="" disabled="disabled" selected="selected">Select number of sides</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="20">20</option>
+          <option value="100">100</option>
+      </select>
+      <br/>
         <button type="submit">Submit</button>
-        <table>
+        <table class="table table-bordered">
             <thead>
             <td>Piece-Side</td>
             <td>Distribution</td>

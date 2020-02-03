@@ -8,7 +8,8 @@ import { SimulationService } from '../simulation.service';
 })
 export class PiecesidecombComponent implements OnInit {
   totals;
-
+  message = "";
+  public show:boolean = false;
   public rows;
 
    constructor(private simulationService: SimulationService) {
@@ -25,6 +26,10 @@ export class PiecesidecombComponent implements OnInit {
       console.log("RESPONSE" + resp);
       if(resp.status === 'SUCCESS'){
         this.rows = resp.list;
+        this.show = false;
+      }else{
+        this.message = resp.message;
+        this.show = true;
       }
     }, error => {
       console.error('error handled in page', error); // TODO: change this to show UI error component
