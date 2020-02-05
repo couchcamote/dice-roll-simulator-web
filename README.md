@@ -2,7 +2,7 @@
 
 Before running this application, the [back-end](https://github.com/couchcamote/dice-roll-simulator) server should be started first. 
 
-Install any dependencies
+Install any dependencies:
 > npm install
 
 ## Development server
