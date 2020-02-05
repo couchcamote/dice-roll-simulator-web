@@ -7,8 +7,7 @@ import { SimulationService } from '../simulation.service';
   styleUrls: ['./simulate.component.css']
 })
 export class SimulateComponent implements OnInit {
-  totals;
-
+  rows;
   public roll = 100;
   public side = 6;
   public piece = 3;
@@ -27,7 +26,7 @@ export class SimulateComponent implements OnInit {
     this.simulationService.getTotalsList(this.side, this.piece, this.roll)
     .subscribe((resp) => {
       console.log("RESPONSE" + resp);
-        this.totals = resp;
+        this.rows = resp;
         this.show = false;
     }, error => {
       console.error('error handled in page', error); // TODO: change this to show UI error component

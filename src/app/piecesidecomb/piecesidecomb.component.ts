@@ -7,7 +7,6 @@ import { SimulationService } from '../simulation.service';
   styleUrls: ['./piecesidecomb.component.css']
 })
 export class PiecesidecombComponent implements OnInit {
-  totals;
   message = "";
   public show:boolean = false;
   public rows;
@@ -24,7 +23,7 @@ export class PiecesidecombComponent implements OnInit {
     this.simulationService.getPieceSide()
     .subscribe((resp) => {
       console.log("RESPONSE" + resp);
-        this.totals = resp;
+        this.rows = resp;
         this.show = false;
     }, error => {
       console.error('error handled in page', error); // TODO: change this to show UI error component
